@@ -11,6 +11,9 @@ import tensorflow as tf
 from .utils import load_catalogue, load_FASTA, load_predicted_PDB, seq2onehot
 from .layers import MultiGraphConv, GraphConv, FuncPredictor, SumPooling
 
+#ask tensorflow to not allocate almost all GPU memory but instead use memory growth on physical device (John Zinno)
+gpu = tf.config.experimental.list_physical_devices('GPU')
+tf.config.experimental.set_memory_growth(gpu[0], True)
 
 class GradCAM(object):
     """
