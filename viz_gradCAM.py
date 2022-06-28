@@ -152,8 +152,8 @@ if __name__ == "__main__":
             f.write("#!/usr/bin/env python\n")
             f.write("import time\n")
             f.write("import pymol\n\n")
-            f.write("pymol.cmd.bg_color( \'white\' )\n")
-            f.write("pymol.cmd.viewport( \'2000\', \'2000\' )\n")
+            # f.write("pymol.cmd.bg_color( \'white\' )\n")
+            # f.write("pymol.cmd.viewport( \'2000\', \'2000\' )\n")
             f.write("pymol.cmd.set( \'sphere_scale\', \'0.5\' )\n")
 
             for c in range(0, len(lchains)):
